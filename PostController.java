@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PostController {
 
-    // This POST endpoint expects JSON with a field "message"
+    
     @PostMapping("/post-message")
     public String receiveMessage(@RequestBody Message message) {
         return "Received message: " + message.getMessage();
     }
 
-    // Inner class to hold the message
+    
     public static class Message {
         private String message;
 
